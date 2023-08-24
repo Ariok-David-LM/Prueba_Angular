@@ -1,0 +1,23 @@
+.texto {
+    text-align: center;
+    font-style: italic;
+    color: white;
+}
+
+.titulo {
+    background-color: rgb(151, 98, 201);
+    padding-top: 2px;
+    border-radius: 45% 5% ;
+}
+
+.tabla {
+    background-color: rgb(212, 177, 245);
+    border-style: double;
+    margin: 5px;
+}
+
+.tabla th, .tabla td {
+    border: 1px solid #ddd;
+    padding: 8px;
+    text-align: left;
+}
