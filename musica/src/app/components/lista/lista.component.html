@@ -1,1 +1,23 @@
-<p>lista works!</p>
+<div class="mt-3 col-5">
+    <table class="table">
+        <tr>
+            <th scope="col">Canción</th>
+            <th scope="col">Acciones</th>
+        </tr>
+        <tbody>
+            <tr *ngFor="let l of lista">
+                <td>{{l.cancion}}</td>
+                <td>
+                    <div>
+                        <button class="btn btn-primary me-2" (click)="ver('${l.cancion}','${l.artista}','${l.album}','${l.anio}','${l.duracion}')">
+                            Ver
+                        </button>
+                        <button class="btn btn-primary" (click)="delete(l)">
+                            Eliminar
+                        </button>
+                    </div>
+                </td>
+            </tr>
+        </tbody>
+    </table>
+</div>
