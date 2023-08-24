@@ -16,8 +16,9 @@ export class ListaComponent {
     this.cancionService.getCanciones().subscribe((lista)=>(this.lista = lista));    
   }
 
-  ver(n:string,artista:string,album:string,anio:string,duracion:string){
-    this.cancionService.setCancion(n,artista,album,parseInt(anio),duracion);
+  ver(cancion: Lista){
+    console.log(cancion.anio)
+    this.cancionService.setCancion(cancion.cancion,cancion.artista,cancion.album,cancion.anio,cancion.duracion);
     this.router.navigate(['detalles'])
   }
 
