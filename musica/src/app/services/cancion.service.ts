@@ -4,7 +4,7 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class CancionService {
-  private cancion: String = "";
+  private cancion: String = "hola";
   private artista: String = "";
   private album: String = "";
   private anio: Number = 0;
