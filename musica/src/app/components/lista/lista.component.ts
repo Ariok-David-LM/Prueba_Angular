@@ -21,5 +21,8 @@ export class ListaComponent {
     this.router.navigate(['detalles'])
   }
 
-
+  delete(cancion: Lista): void {
+    this.lista = this.lista.filter(h => h !== cancion);
+    this.cancionService.deleteCancion(cancion.cancion).subscribe();
+  }
 }
