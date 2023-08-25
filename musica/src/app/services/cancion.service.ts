@@ -15,11 +15,13 @@ const httpOptions = {
 })
 export class CancionService {
   private apiUrl = 'http://localhost:5000/canciones';
-  private cancion: String = "";
-  private artista: String = "";
-  private album: String = "";
-  private anio: Number = 0;
-  private duracion: String = "";
+  private cancion: Lista = {
+    cancion: "",
+    artista: "",
+    album: "",
+    anio: 0,
+    duracion: ""
+  };
 
   constructor(private http : HttpClient){}
 
@@ -33,20 +35,10 @@ export class CancionService {
   }
 
   getCancion () {
-    return {
-      cancion: this.cancion,
-      artista: this.artista,
-      album: this.album,
-      anio: this.anio,
-      duracion: this.duracion
-    }
+    return this.cancion
   }
 
-  setCancion (can: String, art: String, alb: String, an: Number, dur: String) {
-    this.cancion = can;
-    this.artista = art;
-    this.album = alb;
-    this.anio = an;
-    this.duracion = dur;
+  setCancion (can: Lista) {
+    this.cancion= can;
   }
 }

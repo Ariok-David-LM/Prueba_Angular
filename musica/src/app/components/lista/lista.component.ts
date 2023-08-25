@@ -17,12 +17,11 @@ export class ListaComponent {
   }
 
   ver(cancion: Lista){
-    console.log(cancion.anio)
-    this.cancionService.setCancion(cancion.cancion,cancion.artista,cancion.album,cancion.anio,cancion.duracion);
+    this.cancionService.setCancion(cancion);
     this.router.navigate(['detalles'])
   }
 
-  delete(cancion: Lista): void {
+  delete(cancion: Lista){
     this.lista = this.lista.filter(h => h !== cancion);
     this.cancionService.deleteCancion(cancion.cancion).subscribe();
   }
